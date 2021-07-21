@@ -1,12 +1,19 @@
 import React from 'react';
 import './MainFrame.css';
-import Navbar from './Navbar';
+import SideBar from './SideBar';
+import MainBar from './MainBar';
 
 class MainFrame extends React.Component {
 	render() {
 		return (
 			<div className="MainFrame">
-				<Navbar />
+				<SideBar>
+					{/* <Logo /> */}
+					{/* <NavBar /> */}
+				</SideBar>
+				<MainBar>
+
+				</MainBar>
 			</div>
 		);
 	}

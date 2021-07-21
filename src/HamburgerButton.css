@@ -1,0 +1,27 @@
+.HamburgerButton {
+	cursor: pointer;
+	padding: 20px 25px;
+}
+
+.HamburgerButton__bar {
+	border-radius: 2px;
+	width: 35px;
+	height: 5px;
+	background-color: #333;
+	margin: 6px 0;
+	transition: 0.4s;
+}
+
+.opened .bar1 {
+	-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+	transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.opened .bar2 {
+	opacity: 0;
+}
+
+.opened .bar3 {
+	-webkit-transform: rotate(45deg) translate(-8px, -8px);
+	transform: rotate(45deg) translate(-8px, -8px);
+}
