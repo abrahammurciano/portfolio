@@ -1,11 +1,23 @@
 .SideBar {
 	flex-shrink: 0;
-	background-color: var(--light-2);
+	position: relative;
 	transition: 0.4s;
+	background-color: var(--light-2);
 	width: 0px;
-	overflow-x: visible;
+	height: 100%;
 }
 
 .SideBar.opened {
 	width: 300px;
+}
+
+.SideBar__ButtonWrapper {
+	transition: 0.4s;
+	position: absolute;
+	top: 0;
+	right: -75px;
+}
+
+.SideBar.opened .SideBar__ButtonWrapper {
+	right: 0px;
 }

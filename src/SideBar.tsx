@@ -24,7 +24,9 @@ class SideBar extends React.Component<SideBarProps, SideBarState> {
 	render() {
 		return (
 			<div className={classNames("SideBar", { "opened": this.state.opened })}>
-				<HamburgerButton onClick={() => this.toggle()} opened={this.state.opened} />
+				<div className="SideBar__ButtonWrapper">
+					<HamburgerButton onClick={() => this.toggle()} opened={this.state.opened} />
+				</div>
 				{this.props.children}
 			</div>
 		);

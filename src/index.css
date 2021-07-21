@@ -1,6 +1,8 @@
 :root {
 	--light-1: #ffffff;
 	--light-2: #dddddd;
+	--dark-1: #000000;
+	--dark-2: #333333;
 }
 
 body {
