@@ -7,10 +7,10 @@ export interface NavBarState {
 }
 
 const nav_bar_items = [
-	{ label: "Home" },
-	{ label: "Portfolio" },
-	{ label: "About" },
-	{ label: "Contact" },
+	{ label: "Home", page: "/" },
+	{ label: "Portfolio", page: "/portfolio" },
+	{ label: "About", page: "/about" },
+	{ label: "Contact", page: "/contact" },
 ];
 
 class NavBar extends React.Component<{}, NavBarState> {
@@ -22,7 +22,7 @@ class NavBar extends React.Component<{}, NavBarState> {
 		return (
 			<div className="NavBar">
 				{nav_bar_items.map((item, index) => (
-					<NavBarItem label={item.label} active={index === this.state.selected_item} key={index} />
+					<NavBarItem label={item.label} page={item.page} active={index === this.state.selected_item} key={index} />
 				))}
 			</div>
 		);

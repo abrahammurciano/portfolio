@@ -7,6 +7,8 @@
 	cursor: pointer;
 	font-size: x-large;
 	text-transform: uppercase;
+	color: var(--dark-1);
+	text-decoration: none;
 }
 
 .NavBarItem:hover {
