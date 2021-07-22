@@ -1,12 +1,15 @@
 import './App.css';
-import Background from './Background';
-import MainFrame from './MainFrame';
+import BlobsBackground from './BlobsBackground';
+import MainCardContents from './MainCardContents';
+import Card from './Card';
 
 function App() {
 	return (
 		<div className="App">
-			<Background />
-			<MainFrame />
+			<BlobsBackground />
+			<Card width="90vw" height="90vh" shadowBlur="80px" maxWidth="1400px" snapThreshold="800px">
+				<MainCardContents />
+			</Card>
 		</div>
 	);
 }

@@ -1,4 +1,4 @@
-.Background {
+.BlobsBackground {
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -6,18 +6,18 @@
 	right: 0;
 }
 
-.Background img {
+.BlobsBackground img {
 	display: block;
 }
 
-.Background__TopRight {
+.BlobsBackground__TopRight {
 	position: absolute;
 	top: 0;
 	right: -100px;
 	height: 300px;
 }
 
-.Background__BottomLeft {
+.BlobsBackground__BottomLeft {
 	position: absolute;
 	bottom: -10px;
 	left: 0;

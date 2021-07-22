@@ -1,14 +1,14 @@
+.SideBar,
+.SideBar__OuterWrapper,
+.SideBar__InnerWrapper {
+	transition: 0.4s;
+}
+
 .SideBar {
 	flex-shrink: 0;
 	position: relative;
-	transition: 0.4s;
 	background-color: var(--light-2);
-	width: 0px;
 	height: 100%;
-}
-
-.SideBar.opened {
-	width: 300px;
 }
 
 .SideBar__ButtonWrapper {
@@ -20,4 +20,19 @@
 
 .SideBar.opened .SideBar__ButtonWrapper {
 	right: 0px;
+}
+
+.SideBar.opened .SideBar__OuterWrapper {
+	width: var(--expanded-width);
+}
+
+.SideBar__OuterWrapper {
+	overflow-x: hidden;
+	width: 0px;
+	height: 100%;
+}
+
+.SideBar__InnerWrapper {
+	overflow-y: auto;
+	width: var(--expanded-width);
 }

@@ -1,6 +1,6 @@
 import React from "react";
-import classNames from "classnames"
-import "./HamburgerButton.css"
+import classNames from "classnames";
+import "./HamburgerButton.css";
 
 type HamburgerMouseEvent = React.MouseEvent<HTMLButtonElement, MouseEvent>
 

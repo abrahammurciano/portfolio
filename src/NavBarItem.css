@@ -1,0 +1,15 @@
+.NavBarItem {
+	--height: 64px;
+	width: 100%;
+	height: var(--height);
+	line-height: var(--height);
+	text-align: center;
+	cursor: pointer;
+	font-size: x-large;
+	text-transform: uppercase;
+}
+
+.NavBarItem:hover {
+	background-color: var(--primary-dark);
+	color: var(--light-1);
+}
