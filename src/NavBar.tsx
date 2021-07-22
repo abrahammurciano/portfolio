@@ -18,11 +18,17 @@ class NavBar extends React.Component<{}, NavBarState> {
 		super(props);
 		this.state = { selected_item: 0 };
 	}
+
+	setSelectedItem(index: number) {
+		this.setState({ selected_item: index })
+	}
+
 	render() {
+		console.log(this);
 		return (
 			<div className="NavBar">
 				{nav_bar_items.map((item, index) => (
-					<NavBarItem label={item.label} page={item.page} active={index === this.state.selected_item} key={index} />
+					<NavBarItem label={item.label} page={item.page} active={index === this.state.selected_item} key={index} onClick={(e) => this.setSelectedItem(index)} />
 				))}
 			</div>
 		);
