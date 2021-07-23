@@ -5,6 +5,8 @@
 	--dark-2: #333333;
 	--primary-dark: #d93f87;
 	--primary-light: #ffafd4;
+	--accent-dark: #0099ff;
+	--accent-light: #3eefff;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Mali:wght@200;400;700&display=swap");
