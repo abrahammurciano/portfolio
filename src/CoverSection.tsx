@@ -8,10 +8,12 @@ class CoverSection extends React.Component {
 	render() {
 		return (
 			<div className="CoverSection">
+				<div className="CoverSection__Introduction">
+					<Introduction />
+				</div>
 				<div className="CoverSection__Photo">
 					<BubblePhoto image={profile_photo} diameter="300px" width="360px" height="330px"></BubblePhoto>
 				</div>
-				<Introduction />
 			</div>
 		);
 	}
