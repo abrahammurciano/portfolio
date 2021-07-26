@@ -1,0 +1,35 @@
+.ImageTextSplit {
+	display: flex;
+	position: relative;
+}
+
+.ImageTextSplit__Image {
+	width: 50%;
+	background-position: center;
+	background-size: cover;
+	box-shadow: inset 0px 0px 0px 20px var(--dark-transparent-2);
+}
+
+.ImageTextSplit__Text {
+	width: 50%;
+	box-sizing: border-box;
+	padding: 50px;
+}
+
+.ImageTextSplit.small .ImageTextSplit__Image {
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	box-shadow: none;
+}
+
+.ImageTextSplit.small .ImageTextSplit__Text {
+	width: 100%;
+	margin: 25px;
+	padding: 25px;
+	background-color: var(--dark-transparent-1);
+}

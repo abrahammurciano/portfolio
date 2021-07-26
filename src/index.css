@@ -2,6 +2,8 @@
 	--light-1: #ffffff;
 	--light-2: #dddddd;
 	--dark-1: #000000;
+	--dark-transparent-1: rgba(0, 0, 0, 0.7);
+	--dark-transparent-2: rgba(0, 0, 0, 0.3);
 	--dark-2: #333333;
 	--primary-dark: #d93f87;
 	--primary-light: #ffafd4;
