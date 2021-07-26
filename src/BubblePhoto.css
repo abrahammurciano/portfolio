@@ -4,16 +4,23 @@
 
 .BubblePhoto__Circle {
 	position: absolute;
+}
+
+.BubblePhoto__Photo {
 	top: 0px;
 	left: 0px;
 }
 
 .BubblePhoto__Border {
+	top: 0px;
+	left: 0px;
 	z-index: -1;
 	transform: scale(1.05);
 }
 
 .BubblePhoto__Background {
+	right: 0px;
+	bottom: 0px;
 	z-index: -2;
-	transform: scale(1.05) translate(20%, 10%);
+	transform: scale(1.05);
 }

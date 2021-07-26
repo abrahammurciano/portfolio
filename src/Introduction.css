@@ -1,0 +1,16 @@
+.Introduction__Greeting {
+	font-family: "Work Sans", sans-serif;
+	font-weight: 200;
+	font-size: 48px;
+}
+
+.Introduction__Name {
+	font-family: "Work Sans", sans-serif;
+	font-weight: 900;
+	font-size: 64px;
+}
+
+.Introduction__Trade {
+	font-family: "IM Fell English", serif;
+	font-size: 32px;
+}

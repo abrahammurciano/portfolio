@@ -1,3 +1,9 @@
+.CoverSection {
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+}
+
 .CoverSection__Photo {
-	float: right;
+	flex-shrink: 0;
 }
