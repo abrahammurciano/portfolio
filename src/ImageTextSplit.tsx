@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import React, { CSSProperties } from "react";
+import React, { CSSProperties, ReactNode } from "react";
 import { withResizeDetector } from "react-resize-detector";
 import "./ImageTextSplit.css";
 
@@ -7,6 +7,7 @@ interface ImageTextSplitInnerProps {
 	imageSide?: "left" | "right";
 	imageSrc: string;
 	width?: number;
+	children?: ReactNode;
 }
 
 interface ImageTextSplitInnerState {
@@ -23,7 +24,7 @@ class ImageTextSplitInner extends React.Component<ImageTextSplitInnerProps, Imag
 			smallScreen: false,
 		};
 		this.style = {
-			flexDirection: props.imageSide == "left" ? "row" : "row-reverse",
+			flexDirection: props.imageSide === "left" ? "row" : "row-reverse",
 		};
 		this.imageStyle = {
 			backgroundImage: `url(${props.imageSrc})`,

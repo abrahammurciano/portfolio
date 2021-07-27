@@ -9,7 +9,7 @@ export interface NavBarState {
 const nav_bar_items = [
 	{ label: "Home", page: "/" },
 	{ label: "Portfolio", page: "/portfolio" },
-	{ label: "About", page: "/about" },
+	{ label: "About Me", page: "/about" },
 	{ label: "Contact", page: "/contact" },
 ];
 

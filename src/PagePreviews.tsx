@@ -1,12 +1,10 @@
 import React from "react";
-import ImageTextSplit from "./ImageTextSplit";
-import profile_photo from "./images/profile_photo.jpg";
+import AboutPreview from "./AboutPreview";
 
 class PagePreviews extends React.Component {
 	render() {
 		return (
-			<ImageTextSplit imageSrc={profile_photo} imageSide="left" />
-			// <PagePreview />
+			<AboutPreview />
 			// <PagePreview />
 			// <PagePreview />
 			// <PagePreview />
