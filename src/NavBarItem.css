@@ -25,7 +25,8 @@
 	background-color: var(--primary-light);
 }
 
-.NavBarItem__ActiveIndicator {
+.NavBarItem.active:before {
+	content: "";
 	position: absolute;
 	top: 0;
 	bottom: 0;

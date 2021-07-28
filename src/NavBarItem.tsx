@@ -1,24 +1,26 @@
 import classNames from "classnames";
-import React from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "./NavBarItem.css";
 
 export interface NavBarItemProps {
 	label: string;
 	page: string;
-	active: boolean;
-	onClick: (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void
 }
 
-class NavBarItem extends React.Component<NavBarItemProps, {}> {
-	render() {
-		return (
-			<Link className={classNames("NavBarItem", { "active": this.props.active })} to={this.props.page} onClick={this.props.onClick}>
-				{this.props.active && <div className="NavBarItem__ActiveIndicator"></div>}
-				{this.props.label}
-			</Link>
-		);
+export default function NavBarItem(props: NavBarItemProps) {
+	let [active, setActive] = useState(false);
+	let location = useLocation();
+
+	function onLocationChange() {
+		setActive(window.location.pathname === props.page);
 	}
-}
 
-export default NavBarItem;
+	useEffect(onLocationChange, [location]);
+
+	return (
+		<Link className={classNames("NavBarItem", { "active": active })} to={props.page}>
+			{props.label}
+		</Link>
+	);
+}

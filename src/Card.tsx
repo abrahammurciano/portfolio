@@ -1,4 +1,4 @@
-import React, { CSSProperties } from "react";
+import React, { CSSProperties, ReactNode, useEffect, useState } from "react";
 import "./Card.css";
 
 export interface CardProps {
@@ -10,53 +10,36 @@ export interface CardProps {
 	maxWidth?: string;
 	maxHeight?: string;
 	snapThreshold?: string;
+	children?: ReactNode;
 }
 
-export interface CardState {
-	snap: boolean;
-}
+export default function Card(props: CardProps) {
+	const media_query = window.matchMedia(`(max-width: ${props.snapThreshold}), (max-height: ${props.snapThreshold})`);
+	let [snap, setSnap] = useState(props.snapThreshold === undefined ? false : media_query.matches);
 
-class Card extends React.Component<CardProps, CardState> {
-	media_query: MediaQueryList;
-
-	constructor(props: CardProps) {
-		super(props);
-		this.media_query = window.matchMedia(`(max-width: ${props.snapThreshold}), (max-height: ${props.snapThreshold})`);
-		this.state = { snap: props.snapThreshold === undefined ? false : this.media_query.matches };
+	const updateSnap = (e: MediaQueryListEvent) => {
+		setSnap(e.matches);
 	}
 
-	updateSnap = (e: MediaQueryListEvent) => {
-		this.setState({ snap: e.matches });
-	}
+	useEffect(() => {
+		media_query.addEventListener("change", updateSnap);
+		return () => media_query.removeEventListener("change", updateSnap);
+	}, []);
 
-	componentDidMount() {
-		this.media_query.addEventListener("change", this.updateSnap);
-	}
+	const style: CSSProperties = {
+		"borderRadius": snap ? "0px" : props.borderRadius || "4px",
+		"width": snap ? "100%" : props.width || "95%",
+		"height": snap ? "100%" : props.height || "95%",
+		"boxShadow": `0px 0px ${props.shadowBlur || "25px"} rgba(0, 0, 0, ${props.shadowOpacity || 0.6})`,
+		"maxWidth": props.maxWidth,
+		"maxHeight": props.maxHeight,
+	};
 
-	componentWillUnmount() {
-		this.media_query.removeEventListener("change", this.updateSnap);
-	}
-
-	style(): CSSProperties {
-		return {
-			"borderRadius": this.state.snap ? "0px" : this.props.borderRadius || "4px",
-			"width": this.state.snap ? "100%" : this.props.width || "95%",
-			"height": this.state.snap ? "100%" : this.props.height || "95%",
-			"boxShadow": `0px 0px ${this.props.shadowBlur || "25px"} rgba(0, 0, 0, ${this.props.shadowOpacity || 0.6})`,
-			"maxWidth": this.props.maxWidth,
-			"maxHeight": this.props.maxHeight,
-		};
-	}
-
-	render() {
-		return (
-			<div className="CardWrapper">
-				<div className="Card" style={this.style()}>
-					{this.props.children}
-				</div>
+	return (
+		<div className="CardWrapper">
+			<div className="Card" style={style}>
+				{props.children}
 			</div>
-		);
-	}
+		</div>
+	);
 }
-
-export default Card;
