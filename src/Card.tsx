@@ -15,16 +15,7 @@ export interface CardProps {
 
 export default function Card(props: CardProps) {
 	const media_query = window.matchMedia(`(max-width: ${props.snapThreshold}), (max-height: ${props.snapThreshold})`);
-	let [snap, setSnap] = useState(props.snapThreshold === undefined ? false : media_query.matches);
-
-	const updateSnap = (e: MediaQueryListEvent) => {
-		setSnap(e.matches);
-	}
-
-	useEffect(() => {
-		media_query.addEventListener("change", updateSnap);
-		return () => media_query.removeEventListener("change", updateSnap);
-	}, []);
+	const [snap, setSnap] = useState(props.snapThreshold === undefined ? false : media_query.matches);
 
 	const style: CSSProperties = {
 		"borderRadius": snap ? "0px" : props.borderRadius || "4px",
@@ -34,6 +25,15 @@ export default function Card(props: CardProps) {
 		"maxWidth": props.maxWidth,
 		"maxHeight": props.maxHeight,
 	};
+
+	const updateSnap = (e: MediaQueryListEvent) => {
+		setSnap(e.matches);
+	}
+
+	useEffect(() => {
+		media_query.addEventListener("change", updateSnap);
+		return () => media_query.removeEventListener("change", updateSnap);
+	}, [media_query]);
 
 	return (
 		<div className="CardWrapper">

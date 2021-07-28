@@ -9,14 +9,14 @@ export interface NavBarItemProps {
 }
 
 export default function NavBarItem(props: NavBarItemProps) {
-	let [active, setActive] = useState(false);
+	const [active, setActive] = useState(false);
 	let location = useLocation();
 
 	function onLocationChange() {
 		setActive(window.location.pathname === props.page);
 	}
 
-	useEffect(onLocationChange, [location]);
+	useEffect(onLocationChange, [location, props.page]);
 
 	return (
 		<Link className={classNames("NavBarItem", { "active": active })} to={props.page}>

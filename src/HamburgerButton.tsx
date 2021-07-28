@@ -9,20 +9,16 @@ export interface HamburgerButtonProps {
 	onClick: (event: HamburgerMouseEvent) => void;
 }
 
-class HamburgerButton extends React.Component<HamburgerButtonProps, {}> {
-	onClick(e: HamburgerMouseEvent) {
-		this.props.onClick(e);
+export default function HamburgerButton(props: HamburgerButtonProps) {
+	function onClick(e: HamburgerMouseEvent) {
+		props.onClick(e);
 	}
 
-	render() {
-		return (
-			<button className={classNames("HamburgerButton", { "opened": this.props.opened })} onClick={(e) => this.onClick(e)} type="button">
-				<span className="HamburgerBox">
-					<span className="HamburgerInner"></span>
-				</span>
-			</button>
-		);
-	}
+	return (
+		<button className={classNames("HamburgerButton", { "opened": props.opened })} onClick={(e) => onClick(e)} type="button">
+			<span className="HamburgerBox">
+				<span className="HamburgerInner"></span>
+			</span>
+		</button>
+	);
 }
-
-export default HamburgerButton;

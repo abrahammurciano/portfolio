@@ -1,15 +1,10 @@
-import React from "react";
+import ChildrenOnlyProps from "./ChildrenOnlyProps";
 import "./MainBar.css"
 
-
-class MainBar extends React.Component {
-	render() {
-		return (
-			<div className="MainBar">
-				{this.props.children}
-			</div>
-		);
-	}
+export default function MainBar(props: ChildrenOnlyProps) {
+	return (
+		<div className="MainBar">
+			{props.children}
+		</div>
+	);
 }
-
-export default MainBar;

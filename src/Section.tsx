@@ -1,14 +1,11 @@
 import React from "react";
+import ChildrenOnlyProps from "./ChildrenOnlyProps";
 import "./Section.css"
 
-class Section extends React.Component {
-	render() {
-		return (
-			<section className="Section">
-				{this.props.children}
-			</section>
-		);
-	}
+export default function Section(props: ChildrenOnlyProps) {
+	return (
+		<section className="Section">
+			{props.children}
+		</section>
+	);
 }
-
-export default Section;

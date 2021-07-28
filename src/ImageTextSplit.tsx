@@ -1,6 +1,6 @@
 import classNames from "classnames";
-import React, { CSSProperties, ReactNode } from "react";
-import { withResizeDetector } from "react-resize-detector";
+import { CSSProperties, ReactNode } from "react";
+import { useResizeDetector } from "react-resize-detector";
 import "./ImageTextSplit.css";
 
 interface ImageTextSplitInnerProps {
@@ -10,49 +10,22 @@ interface ImageTextSplitInnerProps {
 	children?: ReactNode;
 }
 
-interface ImageTextSplitInnerState {
-	smallScreen: boolean;
-}
+export default function ImageTextSplit(props: ImageTextSplitInnerProps) {
+	const style: CSSProperties = {
+		flexDirection: props.imageSide === "left" ? "row" : "row-reverse",
+	};
+	const imageStyle: CSSProperties = {
+		backgroundImage: `url(${props.imageSrc})`,
+	};
 
-class ImageTextSplitInner extends React.Component<ImageTextSplitInnerProps, ImageTextSplitInnerState> {
-	style: CSSProperties;
-	imageStyle: CSSProperties;
+	const { width, ref } = useResizeDetector();
 
-	constructor(props: ImageTextSplitInnerProps) {
-		super(props);
-		this.state = {
-			smallScreen: false,
-		};
-		this.style = {
-			flexDirection: props.imageSide === "left" ? "row" : "row-reverse",
-		};
-		this.imageStyle = {
-			backgroundImage: `url(${props.imageSrc})`,
-		};
-	}
-
-	checkSize() {
-		this.setState({ smallScreen: this.props.width !== undefined && this.props.width < 600 });
-	}
-
-	componentDidUpdate(prevProps: ImageTextSplitInnerProps) {
-		if (this.props.width !== prevProps.width) {
-			this.checkSize();
-		}
-	}
-
-	render() {
-		return (
-			<div className={classNames("ImageTextSplit", { "small": this.state.smallScreen })} style={this.style}>
-				<div className="ImageTextSplit__Image" style={this.imageStyle} />
-				<div className="ImageTextSplit__Text">
-					{this.props.children}
-				</div>
+	return (
+		<div className={classNames("ImageTextSplit", { "small": width !== undefined && width < 600 })} style={style} ref={ref}>
+			<div className="ImageTextSplit__Image" style={imageStyle} />
+			<div className="ImageTextSplit__Text">
+				{props.children}
 			</div>
-		);
-	}
+		</div>
+	);
 }
-
-const ImageTextSplit = withResizeDetector(ImageTextSplitInner);
-
-export default ImageTextSplit;
