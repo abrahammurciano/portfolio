@@ -1,4 +1,4 @@
-import coding_outdoors from "./images/coding_outdoors.jpg";
+import portfolio from "./images/portfolio.jpg";
 import PagePreview from "./PagePreview";
 
 export default function AboutPreview({ imageSide }: { imageSide: "left" | "right" }) {
@@ -15,6 +15,6 @@ export default function AboutPreview({ imageSide }: { imageSide: "left" | "right
 	);
 
 	return (
-		<PagePreview heading="Some of my Projects..." imageSrc={coding_outdoors} page="/portfolio" text={text} imageSide={imageSide} buttonText="My Portfolio" />
+		<PagePreview heading="Some of my Projects..." imageSrc={portfolio} page="/portfolio" text={text} imageSide={imageSide} buttonText="My Portfolio" />
 	);
 }
