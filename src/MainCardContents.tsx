@@ -4,11 +4,8 @@ import MainBar from './MainBar';
 import logo from "./images/logo.svg";
 import NavBar from "./NavBar";
 import { Route, Switch } from 'react-router-dom';
-import Home from './Home';
-import Portfolio from './Portfolio';
-import About from './About';
-import Contact from './Contact';
 import Footer from './Footer';
+import pages from './data/pages';
 
 export default function MainCardContents() {
 	return (
@@ -19,18 +16,9 @@ export default function MainCardContents() {
 			</SideBar>
 			<MainBar>
 				<Switch>
-					<Route path="/">
-						<Home />
-					</Route>
-					<Route path="/portfolio">
-						<Portfolio />
-					</Route>
-					<Route path="/about">
-						<About />
-					</Route>
-					<Route path="/contact">
-						<Contact />
-					</Route>
+					{pages.map((page, index) => (
+						<Route path={page.path} component={page.component} key={index} />
+					))}
 				</Switch>
 				<Footer />
 			</MainBar>
