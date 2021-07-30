@@ -16,6 +16,10 @@
 	padding: 50px;
 }
 
+.ImageTextSplit.small {
+	margin-bottom: 40px;
+}
+
 .ImageTextSplit.small .ImageTextSplit__Image {
 	position: absolute;
 	z-index: -1;

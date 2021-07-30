@@ -23,6 +23,7 @@ body {
 	margin: 0;
 	font-family: "Work Sans", sans-serif;
 	font-weight: 300;
+	font-size: 14pt;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }

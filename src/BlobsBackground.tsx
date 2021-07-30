@@ -1,7 +1,6 @@
 import blob1 from './images/blob1.svg';
 import blob2 from './images/blob2.svg';
 import './BlobsBackground.css';
-import React from 'react';
 
 export default function BlobsBackground() {
 	return (
