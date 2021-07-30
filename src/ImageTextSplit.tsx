@@ -1,13 +1,13 @@
 import classNames from "classnames";
-import { CSSProperties, ReactNode } from "react";
+import { CSSProperties } from "react";
 import { useResizeDetector } from "react-resize-detector";
+import WrapperProps from "./WrapperProps";
 import "./ImageTextSplit.css";
 
-interface ImageTextSplitInnerProps {
+interface ImageTextSplitInnerProps extends WrapperProps {
 	imageSide?: "left" | "right";
 	imageSrc: string;
 	width?: number;
-	children?: ReactNode;
 }
 
 export default function ImageTextSplit(props: ImageTextSplitInnerProps) {

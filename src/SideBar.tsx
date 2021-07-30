@@ -1,12 +1,12 @@
 import classNames from "classnames";
-import { CSSProperties, ReactNode, useState } from "react";
+import { CSSProperties, useState } from "react";
 import HamburgerButton from "./HamburgerButton";
 import "./SideBar.css"
+import WrapperProps from "./WrapperProps";
 
-interface SideBarProps {
+interface SideBarProps extends WrapperProps {
 	opened?: boolean;
 	expandedWidth?: string;
-	children?: ReactNode;
 }
 
 export default function SideBar(props: SideBarProps) {

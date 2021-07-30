@@ -1,7 +1,7 @@
-import ChildrenOnlyProps from "./ChildrenOnlyProps";
+import WrapperProps from "./WrapperProps";
 import "./MainBar.css"
 
-export default function MainBar(props: ChildrenOnlyProps) {
+export default function MainBar(props: WrapperProps) {
 	return (
 		<div className="MainBar">
 			{props.children}

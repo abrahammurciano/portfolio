@@ -1,12 +1,11 @@
-import { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import "./ButtonLink.css";
+import WrapperProps from "./WrapperProps";
 
-export interface ButtonLinkProps {
+export interface ButtonLinkProps extends WrapperProps {
 	to: string;
 	leftIcon?: string;
 	rightIcon?: string;
-	children?: ReactNode;
 }
 
 export default function ButtonLink(props: ButtonLinkProps) {

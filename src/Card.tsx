@@ -1,7 +1,8 @@
-import { CSSProperties, ReactNode, useEffect, useState } from "react";
+import { CSSProperties, useEffect, useState } from "react";
 import "./Card.css";
+import WrapperProps from "./WrapperProps";
 
-export interface CardProps {
+export interface CardProps extends WrapperProps {
 	borderRadius?: string;
 	width?: string;
 	height?: string;
@@ -10,7 +11,6 @@ export interface CardProps {
 	maxWidth?: string;
 	maxHeight?: string;
 	snapThreshold?: string;
-	children?: ReactNode;
 }
 
 export default function Card(props: CardProps) {

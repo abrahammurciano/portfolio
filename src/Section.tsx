@@ -1,10 +1,16 @@
-import ChildrenOnlyProps from "./ChildrenOnlyProps";
+import WrapperProps from "./WrapperProps";
 import "./Section.css"
 
-export default function Section(props: ChildrenOnlyProps) {
+export interface SectionProps extends WrapperProps {
+	backgroundImage?: string;
+}
+
+export default function Section(props: SectionProps) {
 	return (
-		<section className="Section">
-			{props.children}
+		<section className="Section" style={{ backgroundImage: props.backgroundImage }}>
+			<div className="Section__Contents">
+				{props.children}
+			</div>
 		</section>
 	);
 }

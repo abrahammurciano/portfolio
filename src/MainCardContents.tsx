@@ -17,7 +17,7 @@ export default function MainCardContents() {
 			<MainBar>
 				<Switch>
 					{pages.map((page, index) => (
-						<Route path={page.path} component={page.component} key={index} />
+						<Route exact path={page.path} component={page.component} key={index} />
 					))}
 				</Switch>
 				<Footer />
