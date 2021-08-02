@@ -3,16 +3,9 @@
 	"tasks": [
 		{
 			"type": "npm",
-			"script": "start",
+			"script": "dev",
 			"problemMatcher": [],
 			"label": "npm: start",
-			"detail": "react-scripts start",
-		},
-		{
-			"type": "shell",
-			"command": "BROWSER=none npm run start",
-			"problemMatcher": "$tsc",
-			"label": "npm: start without browser",
 		}
 	]
 }
