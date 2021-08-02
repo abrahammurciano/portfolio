@@ -2,7 +2,7 @@ import classNames from "classnames";
 import { CSSProperties, useState } from "react";
 import HamburgerButton from "./HamburgerButton";
 import css from "../styles/SideBar.module.css"
-import WrapperProps from "./WrapperProps";
+import WrapperProps from "../WrapperProps";
 
 interface SideBarProps extends WrapperProps {
 	opened?: boolean;

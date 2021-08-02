@@ -1,4 +1,4 @@
-import WrapperProps from "./WrapperProps";
+import WrapperProps from "../WrapperProps";
 import css from "../styles/Section.module.css"
 
 export interface SectionProps extends WrapperProps {
