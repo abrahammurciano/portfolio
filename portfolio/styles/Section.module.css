@@ -1,0 +1,12 @@
+.Section {
+	width: 100%;
+	padding: 80px 5%;
+	box-sizing: border-box;
+	background-size: cover;
+	background-position: center;
+}
+
+.Section__Contents {
+	margin: auto;
+	max-width: 1000px;
+}

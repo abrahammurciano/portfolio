@@ -1,0 +1,25 @@
+.BlobsBackground {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.BlobsBackground img {
+	display: block;
+}
+
+.BlobsBackground__TopRight {
+	position: absolute;
+	top: 0;
+	right: -100px;
+	height: 300px;
+}
+
+.BlobsBackground__BottomLeft {
+	position: absolute;
+	bottom: -10px;
+	left: 0;
+	width: 300px;
+}
