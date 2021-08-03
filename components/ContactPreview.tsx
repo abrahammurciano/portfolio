@@ -5,7 +5,7 @@ export default function ContactPreview({ imageSide }: { imageSide: "left" | "rig
 	const text = (
 		<div>
 			<p>
-				If you'd like to get a quote for some graphic design or programming job, or if you just want to talk, please feel free to get in touch with me.
+				If you&apos;d like to get a quote for some graphic design or programming job, or if you just want to talk, please feel free to get in touch with me.
 			</p>
 		</div>
 	);

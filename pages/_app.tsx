@@ -1,9 +1,9 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
-import React from 'react';
-import BlobsBackground from '../components/BlobsBackground';
-import MainCardContents from '../components/MainCardContents';
-import Card from '../components/Card';
+import "../styles/globals.css"
+import type { AppProps } from "next/app"
+import React from "react";
+import BlobsBackground from "../components/BlobsBackground";
+import MainCardContents from "../components/MainCardContents";
+import Card from "../components/Card";
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
