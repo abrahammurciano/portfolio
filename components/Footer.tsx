@@ -2,7 +2,7 @@ import pages from "../data/pages.json";
 import css from "../styles/Footer.module.css";
 import logo from "../public/images/logo_white.svg";
 import Link from "next/link";
-
+import Image from "next/image";
 export default function Footer() {
 	return (
 		<div className={css.Footer}>
@@ -16,7 +16,7 @@ export default function Footer() {
 			</div>
 			<div className={css.Footer__Column}>
 				<h3>Website designed by</h3>
-				<img src={logo} alt="" width="300px" />
+				<Image src={logo} alt="" width="300px" height="135px" />
 				<p>&copy; Abraham Murciano</p>
 			</div>
 		</div>

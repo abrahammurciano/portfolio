@@ -1,6 +1,7 @@
 import Link from "next/link";
 import css from "../styles/ButtonLink.module.css";
 import WrapperProps from "../WrapperProps";
+import ButtonIcon from "./ButtonIcon";
 
 export interface ButtonLinkProps extends WrapperProps {
 	href: string;
@@ -12,9 +13,9 @@ export default function ButtonLink(props: ButtonLinkProps) {
 	return (
 		<Link href={props.href}>
 			<div className={css.ButtonLink}>
-				{props.leftIcon !== undefined && (<img className={`${css.ButtonLink__Icon} ${css.left}`} src={props.leftIcon} alt="" />)}
+				{props.leftIcon !== undefined && (<ButtonIcon src={props.leftIcon} side="left" />)}
 				{props.children}
-				{props.rightIcon !== undefined && (<img className={`${css.ButtonLink__Icon} ${css.right}`} src={props.rightIcon} alt="" />)}
+				{props.rightIcon !== undefined && (<ButtonIcon src={props.rightIcon} side="right" />)}
 			</div>
 		</Link>
 	);

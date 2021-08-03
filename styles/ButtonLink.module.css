@@ -1,8 +1,7 @@
 .ButtonLink {
 	width: fit-content;
 	display: flex;
-	--padding-sides: 30px;
-	padding: 12px var(--padding-sides);
+	padding: 12px 30px;
 	font-size: x-large;
 	border-radius: 5px;
 	border: none;
@@ -13,22 +12,6 @@
 	font-weight: 900;
 	transition: 0.4s;
 	text-decoration-line: none;
-}
-
-.ButtonLink__Icon {
-	--size: 26px;
-	width: var(--size);
-	height: var(--size);
-}
-
-.ButtonLink__Icon.left {
-	margin-right: calc(var(--padding-sides) / 2);
-	margin-left: calc(var(--padding-sides) / -2);
-}
-
-.ButtonLink__Icon.right {
-	padding-left: calc(var(--padding-sides) / 2);
-	margin-right: calc(var(--padding-sides) / -2);
 }
 
 .ButtonLink:hover {
