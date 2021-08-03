@@ -9,7 +9,7 @@ export default function Biography() {
 				During high school, I recieved my own laptop. I spent much of my free time with it, exploring its functions and learning how to use it to design posters and logos.
 			</p>
 			<p>
-				One day, a friend of mine send me a link to an app, and told me, "Here&apos;s something you might enjoy." It was an app to learn C++. I began learning the C++ course, at first finding it interesting, but as my first exposure to programmin, it quickly became a little bit dull. Especially when I reached pointers. (Spoiler alert; C++ is now my favourite language.)
+				One day, a friend of mine send me a link to an app, and told me, &quot;Here&apos;s something you might enjoy.&quot; It was an app to learn C++. I began learning the C++ course, at first finding it interesting, but as my first exposure to programmin, it quickly became a little bit dull. Especially when I reached pointers. (Spoiler alert; C++ is now my favourite language.)
 			</p>
 			<p>
 				In search of something more interesting to replace the time I was spending learning C++, I found a similar app to learn HTML. While I was learning HTML, I decided to put my newly acquired knowledge to use by volunteering to make a website for a summer camp I was participating in at the time.
