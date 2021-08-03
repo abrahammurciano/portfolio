@@ -5,7 +5,7 @@
 			"type": "npm",
 			"script": "dev",
 			"problemMatcher": [],
-			"label": "npm: start",
+			"label": "npm: dev",
 		}
 	]
 }

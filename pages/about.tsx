@@ -3,6 +3,7 @@ import coding_indoors from "../public/images/coding_indoors.jpg";
 import Section from "../components/Section";
 import TitleSection from "../components/TitleSection";
 import Biography from "../components/Biography";
+import Skills from "../components/Skills";
 
 export default function About() {
 
@@ -18,7 +19,7 @@ export default function About() {
 				<Biography />
 			</Section>
 			<Section>
-				{/* <Skills /> */}
+				<Skills />
 			</Section>
 		</>
 	);
