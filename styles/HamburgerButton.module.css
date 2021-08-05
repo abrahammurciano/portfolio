@@ -19,10 +19,18 @@
 .HamburgerButton.opened:hover {
 	opacity: 0.7;
 }
-.HamburgerButton.opened .HamburgerInner,
+
 .HamburgerButton.opened .HamburgerInner::before,
 .HamburgerButton.opened .HamburgerInner::after {
 	background-color: var(--dark-1);
+}
+
+.HamburgerButton .HamburgerInner {
+	transition: 0.4s;
+}
+
+.HamburgerButton.opened .HamburgerInner {
+	width: 0px;
 }
 
 .HamburgerBox {
@@ -30,6 +38,9 @@
 	height: 24px;
 	display: inline-block;
 	position: relative;
+}
+.HamburgerButton.opened .HamburgerBox {
+	width: 20px;
 }
 
 .HamburgerInner {
