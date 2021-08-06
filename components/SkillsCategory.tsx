@@ -14,8 +14,8 @@ export default function SkillsCategory(props: SkillsCategoryProps) {
 			<div className={css.SkillsCategory__Badges}>
 				{
 					props.badges.map((badge, index) => (
-						<div className={css.SkillsCategory__BadgeWrapper}>
-							<Badge {...badge} shadow={true} key={index} />
+						<div className={css.SkillsCategory__BadgeWrapper} key={index}>
+							<Badge {...badge} shadow={true} />
 						</div>
 					))
 				}

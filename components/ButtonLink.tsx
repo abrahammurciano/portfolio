@@ -11,7 +11,7 @@ export interface ButtonLinkProps extends WrapperProps {
 
 export default function ButtonLink(props: ButtonLinkProps) {
 	return (
-		<Link href={props.href}>
+		<Link href={props.href} passHref>
 			<div className={css.ButtonLink}>
 				{props.leftIcon !== undefined && (<ButtonIcon src={props.leftIcon} side="left" />)}
 				{props.children}
