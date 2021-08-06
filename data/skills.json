@@ -18,7 +18,7 @@
 				"logo": "python"
 			},
 			{
-				"skill": "C#",
+				"skill": "C%23",
 				"level": 4,
 				"primary_colour": "9669CF",
 				"secondary_colour": "370085",
@@ -105,10 +105,10 @@
 			{
 				"skill": "React",
 				"level": 3,
-				"primary_colour": "TODO: set",
-				"secondary_colour": "TODO: set",
+				"primary_colour": "61DAFB",
+				"secondary_colour": "282C34",
 				"logo": "react",
-				"logo_colour": "white"
+				"logo_colour": "61DAFB"
 			},
 			{
 				"skill": "WPF",
@@ -165,6 +165,67 @@
 				"secondary_colour": "111111",
 				"logo": "sqlite",
 				"logo_colour": "white"
+			}
+		]
+	},
+	{
+		"category_name": "Other",
+		"badges": [
+			{
+				"skill": "Object Oriented Programming",
+				"level": 4,
+				"primary_colour": "98ee99",
+				"secondary_colour": "66bb6a"
+			},
+			{
+				"skill": "Linux",
+				"level": 2,
+				"primary_colour": "f7c700",
+				"secondary_colour": "eeeeee",
+				"logo": "linux",
+				"logo_colour": "black"
+			},
+			{
+				"skill": "Arch Linux",
+				"level": 3,
+				"primary_colour": "0f94d2",
+				"secondary_colour": "333333",
+				"logo": "arch-linux",
+				"logo_colour": "0F94D2"
+			},
+			{
+				"skill": "Threading",
+				"level": 1,
+				"primary_colour": "883997",
+				"secondary_colour": "ee98fb"
+			},
+			{
+				"skill": "Agile",
+				"level": 3,
+				"primary_colour": "ff94c2",
+				"secondary_colour": "ba2d65"
+			},
+			{
+				"skill": "Git",
+				"level": 3,
+				"primary_colour": "3f2f00",
+				"secondary_colour": "e94e31",
+				"logo": "git",
+				"logo_colour": "white"
+			},
+			{
+				"skill": "Graphic Design",
+				"level": 3,
+				"primary_colour": "757de8",
+				"secondary_colour": "002984"
+			},
+			{
+				"skill": "Next.js",
+				"level": 1,
+				"logo": "next.js",
+				"logo_colour": "black",
+				"primary_colour": "black",
+				"secondary_colour": "white"
 			}
 		]
 	}

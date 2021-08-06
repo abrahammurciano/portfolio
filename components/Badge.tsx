@@ -1,10 +1,15 @@
+import classNames from "classnames";
+import QueryString from "query-string"
+import css from "../styles/Badge.module.css";
+
 export interface BadgeProps {
 	skill: string;
 	level?: number;
 	primary_colour: string;
 	secondary_colour: string;
-	logo: string;
+	logo?: string;
 	logo_colour?: string;
+	shadow?: boolean;
 }
 
 export default function Badge(props: BadgeProps) {
@@ -24,23 +29,11 @@ export default function Badge(props: BadgeProps) {
 			logoColor: props.logo_colour || "",
 		}
 
-		return base + basic_info + obj_to_url_params(url_params);
-	}
 
-	function obj_to_url_params(url_params: any): string {
-		// TODO: look up library for this
-		let separator = "?";
-		let result = "";
-		for (const key in url_params) {
-			if (Object.prototype.hasOwnProperty.call(url_params, key) && url_params[key]) {
-				result += separator + key + "=" + url_params[key];
-				separator = "&";
-			}
-		}
-		return result;
+		return base + basic_info + "?" + QueryString.stringify(url_params);
 	}
 
 	return (
-		<img src={src()} alt={props.skill + (props.level !== undefined ? ` - ${levels[props.level]}` : "")} />
+		<img className={classNames({ [css.shadow]: props.shadow })} src={src()} alt={props.skill + (props.level !== undefined ? ` - ${levels[props.level]}` : "")} />
 	)
 }

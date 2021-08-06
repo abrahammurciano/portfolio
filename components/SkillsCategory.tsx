@@ -1,5 +1,6 @@
 import React from "react";
 import Badge, { BadgeProps } from "./Badge";
+import css from "../styles/SkillsCategory.module.css";
 
 export interface SkillsCategoryProps {
 	category_name: string;
@@ -10,11 +11,15 @@ export default function SkillsCategory(props: SkillsCategoryProps) {
 	return (
 		<>
 			<h2>{props.category_name}</h2>
-			{
-				props.badges.map((badge_props, index) => (
-					<Badge {...badge_props} key={index} />
-				))
-			}
+			<div className={css.SkillsCategory__Badges}>
+				{
+					props.badges.map((badge, index) => (
+						<div className={css.SkillsCategory__BadgeWrapper}>
+							<Badge {...badge} shadow={true} key={index} />
+						</div>
+					))
+				}
+			</div>
 		</>
 	)
 }

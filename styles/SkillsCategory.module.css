@@ -1,0 +1,9 @@
+.SkillsCategory__Badges {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.SkillsCategory__BadgeWrapper {
+	padding: 5px 10px;
+}
