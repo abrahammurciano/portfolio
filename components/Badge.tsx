@@ -8,7 +8,7 @@ export interface BadgeProps {
 	primary_colour: string;
 	secondary_colour: string;
 	logo?: string;
-	logo_colour?: string;
+	logo_colour: string;
 	shadow?: boolean;
 }
 
@@ -26,7 +26,7 @@ export default function Badge(props: BadgeProps) {
 			style: "for-the-badge",
 			logo: props.logo,
 			labelColor: props.secondary_colour,
-			logoColor: props.logo_colour || "",
+			logoColor: props.logo_colour,
 		}
 
 
@@ -36,4 +36,8 @@ export default function Badge(props: BadgeProps) {
 	return (
 		<img className={classNames({ [css.shadow]: props.shadow })} src={src()} alt={props.skill + (props.level !== undefined ? ` - ${levels[props.level]}` : "")} />
 	)
+}
+
+Badge.defaultProps = {
+	logo_colour: ""
 }

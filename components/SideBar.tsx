@@ -1,19 +1,20 @@
 import classNames from "classnames";
-import { CSSProperties, useState } from "react";
+import { CSSProperties, Dispatch, SetStateAction, useState } from "react";
 import HamburgerButton from "./HamburgerButton";
 import css from "../styles/SideBar.module.css"
 import WrapperProps from "../WrapperProps";
 
 interface SideBarProps extends WrapperProps {
-	opened?: boolean;
-	expandedWidth?: string;
+	openedState?: [boolean, Dispatch<SetStateAction<boolean>>];
+	expandedWidth: string;
 }
 
 export default function SideBar(props: SideBarProps) {
-	const [opened, setOpened] = useState<boolean>(props.opened || true);
 	const style: CSSProperties = {
-		["--expanded-width" as any]: props.expandedWidth || "320px",
+		["--expanded-width" as any]: props.expandedWidth,
 	}
+
+	const [opened, setOpened] = props.openedState || useState<boolean>(false);
 
 	return (
 		<div className={classNames(css.SideBar, { [css.opened]: opened })} style={style}>
@@ -27,4 +28,8 @@ export default function SideBar(props: SideBarProps) {
 			</div>
 		</div>
 	);
+}
+
+SideBar.defaultProps = {
+	expandedWidth: "320px"
 }

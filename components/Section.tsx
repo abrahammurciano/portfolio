@@ -1,6 +1,5 @@
 import WrapperProps from "../WrapperProps";
 import css from "../styles/Section.module.css"
-import Image from "next/image";
 import Background from "./Background";
 
 export interface SectionProps extends WrapperProps {

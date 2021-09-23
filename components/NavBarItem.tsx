@@ -6,9 +6,10 @@ import { useRouter } from "next/dist/client/router";
 
 export interface NavBarItemProps {
 	page: { title: string; path: string; };
+	onClick: () => void;
 }
 
-export default function NavBarItem({ page }: NavBarItemProps) {
+export default function NavBarItem({ page, onClick }: NavBarItemProps) {
 	const [active, setActive] = useState(false);
 	let router = useRouter();
 
@@ -19,7 +20,7 @@ export default function NavBarItem({ page }: NavBarItemProps) {
 	useEffect(onLocationChange, [router, page.path]);
 
 	return (
-		<div className={classNames(css.NavBarItem, { [css.active]: active })}>
+		<div className={classNames(css.NavBarItem, { [css.active]: active })} onClick={onClick}>
 			<Link href={page.path}>
 				{page.title}
 			</Link>
