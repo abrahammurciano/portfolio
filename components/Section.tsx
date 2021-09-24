@@ -1,4 +1,4 @@
-import WrapperProps from "../WrapperProps";
+import WrapperProps from "../models/WrapperProps";
 import css from "../styles/Section.module.css"
 import Background from "./Background";
 

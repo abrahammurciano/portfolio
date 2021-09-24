@@ -1,6 +1,6 @@
 import Link from "next/link";
 import css from "../styles/ButtonLink.module.css";
-import WrapperProps from "../WrapperProps";
+import WrapperProps from "../models/WrapperProps";
 import ButtonIcon from "./ButtonIcon";
 
 export interface ButtonLinkProps extends WrapperProps {

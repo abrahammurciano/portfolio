@@ -1,6 +1,6 @@
 import { CSSProperties } from "react";
 import css from "../styles/Title.module.css";
-import WrapperProps from "../WrapperProps";
+import WrapperProps from "../models/WrapperProps";
 
 export interface TitleProps extends WrapperProps {
 	style?: CSSProperties;

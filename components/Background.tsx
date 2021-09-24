@@ -1,4 +1,4 @@
-import WrapperProps from "../WrapperProps";
+import WrapperProps from "../models/WrapperProps";
 import Image from "next/image"
 import css from "../styles/Background.module.css";
 

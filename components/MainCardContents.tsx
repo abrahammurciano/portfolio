@@ -3,7 +3,7 @@ import SideBar from "./SideBar";
 import logo from "../public/images/logo.svg";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
-import WrapperProps from "../WrapperProps";
+import WrapperProps from "../models/WrapperProps";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import SimpleBar from "simplebar-react";

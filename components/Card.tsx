@@ -1,6 +1,6 @@
 import { CSSProperties } from "react";
 import css from "../styles/Card.module.css";
-import WrapperProps from "../WrapperProps";
+import WrapperProps from "../models/WrapperProps";
 import { useResizeDetector } from "react-resize-detector";
 
 export interface CardProps extends WrapperProps {

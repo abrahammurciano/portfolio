@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import { CSSProperties } from "react";
 import { useResizeDetector } from "react-resize-detector";
-import WrapperProps from "../WrapperProps";
+import WrapperProps from "../models/WrapperProps";
 import css from "../styles/ImageTextSplit.module.css";
 
 interface ImageTextSplitInnerProps extends WrapperProps {
