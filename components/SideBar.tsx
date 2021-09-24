@@ -14,7 +14,8 @@ export default function SideBar(props: SideBarProps) {
 		["--expanded-width" as any]: props.expandedWidth,
 	}
 
-	const [opened, setOpened] = props.openedState || useState<boolean>(false);
+	const state = useState(false);
+	const [opened, setOpened] = props.openedState || state;
 
 	return (
 		<div className={classNames(css.SideBar, { [css.opened]: opened })} style={style}>
