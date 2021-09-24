@@ -8,7 +8,7 @@ export interface BadgeProps {
 	primary_colour: string;
 	secondary_colour: string;
 	logo?: string;
-	logo_colour: string;
+	logo_colour?: string;
 	shadow?: boolean;
 }
 
