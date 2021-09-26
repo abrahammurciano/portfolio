@@ -1,8 +1,10 @@
 export default abstract class Filter {
-	name: string;
+	readonly name: string;
 	constructor(name: string) {
 		this.name = name;
 	}
 
-	abstract component(): JSX.Element;
+	abstract component(onUpdate: (newFilter: Filter) => void): JSX.Element;
+
+	abstract queryString(): string;
 }
