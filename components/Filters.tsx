@@ -1,5 +1,6 @@
 import Filter from "../models/Filter";
 import css from "../styles/Filters.module.css"
+import "../util/ArrayExtensions"
 
 export interface FiltersProps {
 	filters: Filter[];
@@ -9,12 +10,10 @@ export interface FiltersProps {
 export default function Filters({ filters, setFilters }: FiltersProps) {
 	return (
 		<div className={css.Filters}>
-			{filters.map(filter => (
-				filter.component(newFilter => {
-					const newFilters = [...filters];
-					newFilters[newFilters.indexOf(filter)] = newFilter;
-					setFilters(newFilters);
-				})
+			{filters.map((filter, index) => (
+				<div key={index}>
+					{filter.component(newFilter => setFilters(filters.instead(filter, newFilter)))}
+				</div>
 			))}
 		</div>
 	);

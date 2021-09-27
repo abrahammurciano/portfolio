@@ -1,5 +1,26 @@
 .Arrow {
-	width: 20px;
-	height: 4px;
-	border-radius: 50%;
+	width: var(--size);
+	height: var(--size);
+	position: relative;
+	transform: rotate(var(--rotation));
+	transition: transform 0.5s;
+}
+
+.Arrow__Line {
+	background-color: var(--arrow-colour);
+	border-radius: calc(1 / 15 * var(--size));
+	width: calc(19 / 30 * var(--size));
+	height: calc(2 / 15 * var(--size));
+	position: absolute;
+	top: calc(50% - 1 / 15 * var(--size));
+}
+
+.Arrow__Line_1 {
+	transform: rotate(-45deg);
+	left: 0;
+}
+
+.Arrow__Line_2 {
+	transform: rotate(45deg);
+	right: 0;
 }

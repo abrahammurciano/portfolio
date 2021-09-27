@@ -1,53 +1,42 @@
 import { CSSProperties } from "react";
-import css from "../styles/Card.module.css";
 import WrapperProps from "../models/WrapperProps";
-import { useResizeDetector } from "react-resize-detector";
+import css from "../styles/Card.module.css";
 
 export interface CardProps extends WrapperProps {
 	borderRadius: string;
-	width: string;
-	height: string;
+	width?: string;
+	height?: string;
 	shadowBlur: string;
 	shadowOpacity: number;
-	maxWidth?: string;
-	maxHeight?: string;
-	snapThreshold?: number;
+	style: CSSProperties;
+	className: string;
 }
 
 export default function Card(props: CardProps) {
-	const { width, height, ref } = useResizeDetector();
-
-	function shouldSnap(w?: number, h?: number) {
-		if (props.snapThreshold === undefined || w === undefined || h === undefined) {
-			return false;
-		}
-		return w < props.snapThreshold || h < props.snapThreshold;
-	}
-
-	const snap = shouldSnap(width, height);
-
-	const style: CSSProperties = {
-		"borderRadius": snap ? "0px" : props.borderRadius,
-		"width": snap ? "100%" : props.width,
-		"height": snap ? "100%" : props.height,
-		"boxShadow": `0px 0px ${props.shadowBlur} rgba(0, 0, 0, ${props.shadowOpacity})`,
-		"maxWidth": props.maxWidth,
-		"maxHeight": props.maxHeight,
+	const cssVars = {
+		["--border-radius" as any]: props.borderRadius,
+		["--shadow-blur" as any]: props.shadowBlur,
+		["--shadow-opacity" as any]: props.shadowOpacity,
 	};
 
+	const style = {
+		...cssVars,
+		...props.style,
+		...(props.width && { width: props.width }),
+		...(props.height && { height: props.height }),
+	}
+
 	return (
-		<div className={css.CardWrapper} ref={ref}>
-			<div className={css.Card} style={style}>
-				{props.children}
-			</div>
-		</div>
+		<div className={`${css.Card} ${props.className}`} style={style}>
+			{props.children}
+		</div >
 	);
 }
 
 Card.defaultProps = {
 	borderRadius: "4px",
-	width: "95%",
-	height: "95%",
-	shadowBlur: "25px",
-	shadowOpacity: 0.6
+	shadowBlur: "10px",
+	shadowOpacity: 0.6,
+	style: {},
+	className: "",
 }

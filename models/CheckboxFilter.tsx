@@ -5,7 +5,7 @@ export default class CheckboxFilter extends Filter {
 	private all: string[];
 	private selected: Set<string>;
 
-	constructor(name: string, allOptions: string[], selectedOptions: Set<string> = new Set(allOptions)) {
+	constructor(name: string, allOptions: string[], selectedOptions: Set<string>) {
 		super(name);
 		this.all = allOptions;
 		this.selected = selectedOptions;
@@ -13,7 +13,7 @@ export default class CheckboxFilter extends Filter {
 
 	component(onUpdate: (newFilter: Filter) => void): JSX.Element {
 		return (
-			<DropdownCheckboxes title={this.name} labels={this.all} selected={this.selected} setSelected={(selected) => onUpdate(new CheckboxFilter(this.name, this.all, selected))} />
+			<DropdownCheckboxes title={this.name} labels={this.all} checked={this.selected} setSelected={(selected) => onUpdate(new CheckboxFilter(this.name, this.all, selected))} />
 		)
 	}
 

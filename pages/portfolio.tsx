@@ -11,7 +11,7 @@ import Filter from "../models/Filter";
 
 export default function Portfolio() {
 	const router = useRouter();
-	const categories = new Set(([router.query["categories"] || []]).flat());
+	const categories = new Set(([router.query["Categories"] || []]).flat());
 	const allCategories = projects.map(project => project.categories).flat();
 	const filters = [new CheckboxFilter("Categories", allCategories, categories)];
 
