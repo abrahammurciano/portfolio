@@ -10,7 +10,7 @@ export interface SectionProps extends WrapperProps {
 export default function Section(props: SectionProps) {
 	const sectionContents = (
 		<section className={css.Section}>
-			<div className={css.Section__Contents}>
+			<div className={css.Contents}>
 				{props.children}
 			</div>
 		</section>

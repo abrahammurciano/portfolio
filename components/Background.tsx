@@ -10,10 +10,10 @@ export interface BackgroundProps extends WrapperProps {
 export default function Background(props: BackgroundProps) {
 	return (
 		<div className={css.Background}>
-			<div className={`${css.Background__Image} ${css.Background__Layer}`}>
+			<div className={`${css.Image} ${css.Layer}`}>
 				<Image src={props.image} layout="fill" objectFit="cover" alt="" />
 			</div>
-			<div className={`${css.Background__Dim} ${css.Background__Layer}`} style={{ opacity: props.dim }} />
+			<div className={`${css.Dim} ${css.Layer}`} style={{ opacity: props.dim }} />
 			{props.children}
 		</div>
 	)

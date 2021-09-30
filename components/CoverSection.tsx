@@ -6,10 +6,10 @@ import Introduction from "./Introduction";
 export default function CoverSection() {
 	return (
 		<div className={css.CoverSection}>
-			<div className={css.CoverSection__Introduction}>
+			<div className={css.Introduction}>
 				<Introduction />
 			</div>
-			<div className={css.CoverSection__Photo}>
+			<div className={css.Photo}>
 				<BubblePhoto image={profile_photo} diameter="300px" width="360px" height="330px"></BubblePhoto>
 			</div>
 		</div>

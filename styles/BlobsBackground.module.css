@@ -10,13 +10,13 @@
 	display: block;
 }
 
-.BlobsBackground__TopRight {
+.TopRight {
 	position: absolute;
 	top: 0;
 	right: -100px;
 }
 
-.BlobsBackground__BottomLeft {
+.BottomLeft {
 	position: absolute;
 	bottom: -10px;
 	left: 0;

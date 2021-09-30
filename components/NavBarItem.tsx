@@ -2,7 +2,7 @@ import classNames from "classnames";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import css from "../styles/NavBarItem.module.css";
-import { useRouter } from "next/dist/client/router";
+import { useRouter } from "next/router";
 
 export interface NavBarItemProps {
 	page: { title: string; path: string; };

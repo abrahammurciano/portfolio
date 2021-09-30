@@ -1,6 +1,6 @@
 .SideBar,
-.SideBar__OuterWrapper,
-.SideBar__InnerWrapper {
+.OuterWrapper,
+.InnerWrapper {
 	transition: 0.4s;
 }
 
@@ -12,28 +12,28 @@
 	z-index: 1;
 }
 
-.SideBar__ButtonWrapper {
+.ButtonWrapper {
 	transition: 0.4s;
 	position: absolute;
 	top: 0;
 	right: -75px;
 }
 
-.SideBar.opened .SideBar__ButtonWrapper {
+.SideBar.opened .ButtonWrapper {
 	right: 0px;
 }
 
-.SideBar.opened .SideBar__OuterWrapper {
+.SideBar.opened .OuterWrapper {
 	width: var(--expanded-width);
 }
 
-.SideBar__OuterWrapper {
+.OuterWrapper {
 	overflow-x: hidden;
 	width: 0px;
 	height: 100%;
 }
 
-.SideBar__InnerWrapper {
+.InnerWrapper {
 	overflow-y: auto;
 	width: var(--expanded-width);
 }

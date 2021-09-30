@@ -14,8 +14,8 @@ export default function Arrow(props: ArrowProps) {
 	}
 	return (
 		<div className={css.Arrow} style={cssVars}>
-			<div className={`${css.Arrow__Line} ${css.Arrow__Line_1}`} />
-			<div className={`${css.Arrow__Line} ${css.Arrow__Line_2}`} />
+			<div className={`${css.Line} ${css.Line_1}`} />
+			<div className={`${css.Line} ${css.Line_2}`} />
 		</div>
 	)
 }

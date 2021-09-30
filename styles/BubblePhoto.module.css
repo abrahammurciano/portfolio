@@ -2,23 +2,23 @@
 	position: relative;
 }
 
-.BubblePhoto__Circle {
+.Circle {
 	position: absolute;
 }
 
-.BubblePhoto__Photo {
+.Photo {
 	top: 0px;
 	left: 0px;
 }
 
-.BubblePhoto__Border {
+.Border {
 	top: 0px;
 	left: 0px;
 	z-index: -1;
 	transform: scale(1.05);
 }
 
-.BubblePhoto__Background {
+.Background {
 	right: 0px;
 	bottom: 0px;
 	z-index: -2;

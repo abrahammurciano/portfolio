@@ -3,14 +3,14 @@
 	position: relative;
 }
 
-.ImageTextSplit__Image {
+.Image {
 	width: 50%;
 	background-position: center;
 	background-size: cover;
 	box-shadow: inset 0px 0px 0px 20px var(--dark-transparent-2);
 }
 
-.ImageTextSplit__Text {
+.Text {
 	width: 50%;
 	box-sizing: border-box;
 	padding: 50px;
@@ -20,7 +20,7 @@
 	margin-bottom: 40px;
 }
 
-.ImageTextSplit.small .ImageTextSplit__Image {
+.ImageTextSplit.small .Image {
 	position: absolute;
 	z-index: -1;
 	width: 100%;
@@ -31,7 +31,7 @@
 	box-shadow: none;
 }
 
-.ImageTextSplit.small .ImageTextSplit__Text {
+.ImageTextSplit.small .Text {
 	width: 100%;
 	margin: 25px;
 	padding: 25px;

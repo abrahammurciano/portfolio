@@ -20,14 +20,14 @@ export default function DropdownCheckboxes(props: DropdownCheckboxesProps) {
 
 	return (
 		<div ref={ref} className={css.DropdownCheckboxes}>
-			<div className={classNames(css.DropdownCheckboxes__Button, { [css.DropdownCheckboxes__Opened]: opened })} onClick={() => setOpened(!opened)}>
+			<div className={classNames(css.Button, { [css.Opened]: opened })} onClick={() => setOpened(!opened)}>
 				{props.title}
 				<Arrow rotation={opened ? "0deg" : "180deg"} colour="var(--dropdown-arrow-colour)" size="25px" />
 			</div>
 			{opened && (
-				<div className={css.DropdownCheckboxes__CheckboxesContainer}>
+				<div className={css.CheckboxesContainer}>
 					<Card width="unset" height="unset" borderRadius="20px">
-						<div className={css.DropdownCheckboxes__CheckboxesWrapper}>
+						<div className={css.CheckboxesWrapper}>
 							<Checkboxes labels={props.labels} colour={"var(--primary-dark)"} checked={props.checked} onChange={props.onUpdate} all={true} />
 						</div>
 					</Card>

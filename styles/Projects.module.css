@@ -1,9 +1,7 @@
-.Badges {
+.Projects {
+	padding-block-start: 20px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-}
-
-.BadgeWrapper {
-	padding: 5px 10px;
+	gap: 20px;
 }

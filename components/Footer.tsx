@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function Footer() {
 	return (
 		<div className={css.Footer}>
-			<div className={css.Footer__Column}>
+			<div className={css.Column}>
 				<h3>Looking for something?</h3>
 				{pages.map((page, index) => (
 					<p key={index}>
@@ -14,7 +14,7 @@ export default function Footer() {
 					</p>
 				))}
 			</div>
-			<div className={css.Footer__Column}>
+			<div className={css.Column}>
 				<h3>Website designed by</h3>
 				<Image src={logo} alt="" width="300px" height="135px" />
 				<p>&copy; Abraham Murciano</p>

@@ -2,7 +2,7 @@
 	position: relative;
 }
 
-.Background__Layer {
+.Layer {
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -10,11 +10,11 @@
 	right: 0;
 }
 
-.Background__Image {
+.Image {
 	z-index: -2;
 }
 
-.Background__Dim {
+.Dim {
 	z-index: -1;
 	background-color: #000000;
 }

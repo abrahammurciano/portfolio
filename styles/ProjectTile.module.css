@@ -1,0 +1,41 @@
+.ProjectTile {
+	position: relative;
+	flex-grow: 1.5;
+	width: 333px;
+	cursor: pointer;
+}
+
+.Thumbnail {
+	height: 240px;
+	position: relative;
+}
+
+.TextWrapper {
+	padding: 20px;
+}
+
+.Title {
+	height: 60px;
+	font-size: x-large;
+	font-weight: 600;
+}
+
+.Description {
+	height: 120px;
+	overflow: hidden;
+	position: relative;
+}
+
+.Description::after {
+	content: "";
+	position: absolute;
+	display: block;
+	height: 120px;
+	width: 100%;
+	bottom: 0;
+	background: linear-gradient(
+		0deg,
+		rgba(255, 255, 255, 1) 0%,
+		rgba(255, 255, 255, 0) 100%
+	);
+}

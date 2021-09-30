@@ -22,8 +22,8 @@ export default function ImageTextSplit(props: ImageTextSplitInnerProps) {
 
 	return (
 		<div className={classNames(css.ImageTextSplit, { [css.small]: width !== undefined && width < 600 })} style={style} ref={ref}>
-			<div className={css.ImageTextSplit__Image} style={imageStyle} />
-			<div className={css.ImageTextSplit__Text}>
+			<div className={css.Image} style={imageStyle} />
+			<div className={css.Text}>
 				{props.children}
 			</div>
 		</div>

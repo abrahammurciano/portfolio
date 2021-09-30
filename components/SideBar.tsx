@@ -19,11 +19,11 @@ export default function SideBar(props: SideBarProps) {
 
 	return (
 		<div className={classNames(css.SideBar, { [css.opened]: opened })} style={style}>
-			<div className={css.SideBar__ButtonWrapper}>
+			<div className={css.ButtonWrapper}>
 				<HamburgerButton onClick={() => setOpened(!opened)} opened={opened} />
 			</div>
-			<div className={css.SideBar__OuterWrapper}>
-				<div className={css.SideBar__InnerWrapper}>
+			<div className={css.OuterWrapper}>
+				<div className={css.InnerWrapper}>
 					{props.children}
 				</div>
 			</div>

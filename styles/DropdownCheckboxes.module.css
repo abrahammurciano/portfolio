@@ -2,7 +2,7 @@
 	position: relative;
 }
 
-.DropdownCheckboxes__Button {
+.Button {
 	--dropdown-arrow-colour: var(--dark-3);
 	padding: 10px 20px;
 	border-radius: 50px;
@@ -16,20 +16,21 @@
 	transition: all 0.2s;
 }
 
-.DropdownCheckboxes__Opened {
+.Opened {
 	background-color: var(--primary-light);
 }
 
-.DropdownCheckboxes__Button:hover {
+.Button:hover {
 	--dropdown-arrow-colour: var(--dark-2);
 	background-color: var(--primary-light);
 }
 
-.DropdownCheckboxes__CheckboxesContainer {
+.CheckboxesContainer {
 	position: absolute;
 	top: calc(100% + 5px);
+	z-index: 1;
 }
 
-.DropdownCheckboxes__CheckboxesWrapper {
+.CheckboxesWrapper {
 	padding: 15px;
 }
