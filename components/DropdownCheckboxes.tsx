@@ -10,13 +10,13 @@ export interface DropdownCheckboxesProps {
 	title: string;
 	labels: string[];
 	checked: Set<string>;
-	setSelected: (selected: Set<string>) => void;
+	onUpdate: (checked: Set<string>) => void;
 }
 
 export default function DropdownCheckboxes(props: DropdownCheckboxesProps) {
 	const [opened, setOpened] = useState(false);
 	const ref = useRef(null);
-	useOnClickOutside(ref, () => setOpened(false))
+	useOnClickOutside(ref, () => setOpened(false));
 
 	return (
 		<div ref={ref} className={css.DropdownCheckboxes}>
@@ -28,7 +28,7 @@ export default function DropdownCheckboxes(props: DropdownCheckboxesProps) {
 				<div className={css.DropdownCheckboxes__CheckboxesContainer}>
 					<Card width="unset" height="unset" borderRadius="20px">
 						<div className={css.DropdownCheckboxes__CheckboxesWrapper}>
-							<Checkboxes labels={props.labels} colour={"var(--primary-dark)"} checked={props.checked} onChange={props.setSelected} />
+							<Checkboxes labels={props.labels} colour={"var(--primary-dark)"} checked={props.checked} onChange={props.onUpdate} all={true} />
 						</div>
 					</Card>
 				</div>

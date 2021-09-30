@@ -14,5 +14,13 @@
 			"PHP",
 			"SQL"
 		]
+	},
+	{
+		"id": "test",
+		"title": "Test Project",
+		"description": "This is a test project.",
+		"thumbnail": "public/images/abstract_purple.jpg",
+		"images": [],
+		"categories": ["Website", "Graphic Design", "HTML", "CSS", "C#", "LINQ"]
 	}
 ]

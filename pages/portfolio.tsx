@@ -1,30 +1,50 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Section from "../components/Section";
 import TitleSection from "../components/TitleSection";
 import Projects from "../components/Projects";
-import lines_background from "../public/images/lines_background.jpg";
+import abstract_purple from "../public/images/abstract_purple.jpg";
 import { useRouter } from "next/router";
 import CheckboxFilter from "../models/CheckboxFilter";
-import projects from "../data/projects.json"
+import projects_ from "../data/projects.json"
 import Filters from "../components/Filters";
 import Filter from "../models/Filter";
+import Project from "../models/Project";
+
+const projects: Project[] = projects_;
 
 export default function Portfolio() {
 	const router = useRouter();
-	const categories = new Set(([router.query["Categories"] || []]).flat());
-	const allCategories = projects.map(project => project.categories).flat();
-	const filters = [new CheckboxFilter("Categories", allCategories, categories)];
+	const selectedCategories = new Set(([router.query["Categories"] || []]).flat()); // can be list or string, so flatten for consistent type
+	const allCategories = projects.map(project => project.categories).flat().filter((item, pos, self) => self.indexOf(item) == pos);
+	const checkboxes = allCategories.map(category => {
+		return {
+			label: category,
+			passesFilter: (project: Project) => project.categories.includes(category),
+		}
+	});
+	const [filters, setFilters] = useState<Filter<Project>[]>([]);
 
-	function setFilters(new_filters: Filter[]): void {
-		router.push(`/portfolio?${new_filters.map(f => f.queryString()).join("&")}`);
+	function updateFilters(newFilters: Filter<Project>[]): void {
+		setFilters(newFilters);
+		const queryString = newFilters.map(f => f.queryString()).join("&");
+		router.push("/portfolio" + (queryString && "?" + queryString));
 	}
+
+	useEffect(() => {
+		if (!router.isReady) {
+			return;
+		}
+		setFilters([
+			new CheckboxFilter("Categories", projects, checkboxes, selectedCategories),
+		]);
+	}, [router.isReady]);
 
 	return (
 		<>
-			<TitleSection title="My Portfolio" backgroundImage={lines_background} backgroundDim={0.3} />
+			<TitleSection title="My Portfolio" backgroundImage={abstract_purple} backgroundDim={0.3} />
 			<Section>
-				<Filters filters={filters} setFilters={setFilters} />
-				<Projects filters={filters} />
+				<Filters filters={filters} onUpdate={updateFilters} />
+				<Projects projects={projects.filter(project => filters.every(f => f.filteredData().includes(project)))} />
 			</Section>
 		</>
 	);
