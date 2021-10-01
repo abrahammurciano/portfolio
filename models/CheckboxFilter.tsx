@@ -27,7 +27,7 @@ export default class CheckboxFilter<T> extends Filter<T> {
 		if (this.allLabels.length === this.selected.size) {
 			return "";
 		}
-		return Array.from(this.selected).map(s => `${this.name}=${s}`).join("&");
+		return Array.from(this.selected).map(s => `${this.name}=${encodeURIComponent(s)}`).join("&");
 	}
 
 	filteredData(): T[] {

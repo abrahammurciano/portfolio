@@ -1,15 +1,13 @@
-import { CSSProperties } from "react";
+import React from "react";
 import WrapperProps from "../models/WrapperProps";
 import css from "../styles/Card.module.css";
 
-export interface CardProps extends WrapperProps {
+export interface CardProps extends WrapperProps, React.HTMLProps<HTMLDivElement> {
 	borderRadius: string;
 	width?: string;
 	height?: string;
 	shadowBlur: string;
 	shadowOpacity: number;
-	style: CSSProperties;
-	className: string;
 }
 
 export default function Card(props: CardProps) {
@@ -27,7 +25,7 @@ export default function Card(props: CardProps) {
 	}
 
 	return (
-		<div className={`${css.Card} ${props.className}`} style={style}>
+		<div {...props} className={`${css.Card} ${props.className}`} style={style}>
 			{props.children}
 		</div >
 	);
@@ -37,6 +35,5 @@ Card.defaultProps = {
 	borderRadius: "4px",
 	shadowBlur: "10px",
 	shadowOpacity: 0.6,
-	style: {},
 	className: "",
 }
