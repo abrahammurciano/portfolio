@@ -24,8 +24,10 @@ export default function Card(props: CardProps) {
 		...(props.height && { height: props.height }),
 	}
 
+	const { borderRadius, width, height, shadowBlur, shadowOpacity, ...divAttributes } = props;
+
 	return (
-		<div {...props} className={`${css.Card} ${props.className}`} style={style}>
+		<div {...divAttributes} className={`${css.Card} ${props.className}`} style={style}>
 			{props.children}
 		</div >
 	);

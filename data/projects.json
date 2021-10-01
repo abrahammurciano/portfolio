@@ -3,8 +3,8 @@
 		"id": "namiscakes",
 		"title": "Nami's Cakes Website",
 		"description": "A website I made for a small business which baked beautiful and delicious custom cakes with astonishing decorations. I created the website from scratch using plain HTML, CSS, and JavaScript for the front end, and PHP with SQL for the back end. This was the first full stack website I made.",
-		"thumbnail": "/images/portfolio/namiscakes-thumb.jpg",
-		"images": [],
+		"thumbnail": "/images/portfolio/namiscakes.jpg",
+		"images": ["/images/portfolio/namiscakes.jpg"],
 		"categories": [
 			"Website",
 			"Graphic Design",
