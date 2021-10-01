@@ -14,14 +14,6 @@ const projects: Project[] = projects_;
 
 export default function Portfolio() {
 	const router = useRouter();
-	const selectedCategories = new Set(([router.query["Categories"] || []]).flat()); // can be list or string, so flatten for consistent type
-	const allCategories = projects.map(project => project.categories).flat().filter((item, pos, self) => self.indexOf(item) == pos);
-	const checkboxes = allCategories.map(category => {
-		return {
-			label: category,
-			passesFilter: (project: Project) => project.categories.includes(category),
-		}
-	});
 	const [filters, setFilters] = useState<Filter<Project>[]>([]);
 
 	function updateFilters(newFilters: Filter<Project>[]): void {
@@ -34,10 +26,18 @@ export default function Portfolio() {
 		if (!router.isReady) {
 			return;
 		}
+		const selectedCategories = new Set(([router.query["Categories"] || []]).flat()); // can be list or string, so flatten for consistent type
+		const allCategories = projects.map(project => project.categories).flat().filter((item, pos, self) => self.indexOf(item) == pos);
+		const checkboxes = allCategories.map(category => {
+			return {
+				label: category,
+				passesFilter: (project: Project) => project.categories.includes(category),
+			}
+		});
 		setFilters([
 			new CheckboxFilter("Categories", projects, checkboxes, selectedCategories),
 		]);
-	}, [router.isReady]);
+	}, [router.isReady, router.query]);
 
 	return (
 		<>
