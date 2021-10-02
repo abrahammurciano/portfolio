@@ -5,21 +5,13 @@
 .Button {
 	--dropdown-arrow-colour: var(--dark-3);
 	padding: 10px 20px;
-	border-radius: 50px;
-	border: 1px solid var(--primary-dark);
-	font-weight: 600;
-	color: var(--primary-dark);
 	display: flex;
 	align-items: center;
 	gap: 10px;
-	cursor: pointer;
 	transition: all 0.2s;
 }
 
-.Opened {
-	background-color: var(--primary-light);
-}
-
+.Opened,
 .Button:hover {
 	--dropdown-arrow-colour: var(--dark-2);
 	background-color: var(--primary-light);

@@ -4,13 +4,14 @@ import Tag from "./Tag";
 
 export interface TagsProps {
 	labels: string[];
+	getLink?: (label: string) => string;
 }
 
-export default function Tags({ labels }: TagsProps) {
+export default function Tags({ labels, getLink }: TagsProps) {
 	return (
 		<div className={css.Tags}>
 			{labels.map((label, index) => (
-				<Tag label={label} key={index} />
+				<Tag label={label} key={index} link={getLink ? getLink(label) : undefined} />
 			))}
 		</div>
 	);

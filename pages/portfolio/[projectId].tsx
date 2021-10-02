@@ -30,7 +30,7 @@ export default function ProjectPage() {
 			<Section>
 				<h1>{project.title}</h1>
 				<div className={css.TagsWrapper}>
-					<Tags labels={project.categories} />
+					<Tags labels={project.categories} getLink={label => `/portfolio?Categories=${encodeURIComponent(label)}`} />
 				</div>
 				<div className={css.GalleryWrapper}>
 					<ImageGallery items={project.images.map(image => ({ original: image, thumbnail: image }))} showThumbnails={false} {...singleImageProps} />

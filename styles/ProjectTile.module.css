@@ -1,8 +1,8 @@
 .ProjectTile {
 	position: relative;
-	flex-grow: 1.5;
-	width: 333px;
+	width: 320px;
 	cursor: pointer;
+	flex-grow: 1;
 }
 
 .Thumbnail {
