@@ -27,10 +27,13 @@ export default class CheckboxFilter<T> extends Filter<T> {
 		if (this.allLabels.length === this.selected.size) {
 			return "";
 		}
+		if (this.selected.size === 0) {
+			return `${this.name}=`;
+		}
 		return Array.from(this.selected).map(s => `${this.name}=${encodeURIComponent(s)}`).join("&");
 	}
 
 	filteredData(): T[] {
-		return this.data.filter(datum => this.selectedCheckboxes.length === 0 || this.selectedCheckboxes.some(c => c.passesFilter(datum)));
+		return this.data.filter(datum => this.selectedCheckboxes.some(c => c.passesFilter(datum)));
 	}
 }

@@ -24,7 +24,8 @@ export default function Portfolio() {
 	}
 
 	function setFiltersFromQuery() {
-		const selectedCategories = new Set(([router.query["Categories"] || []]).flat()); // can be list or string, so flatten for consistent type
+
+		const selectedCategories = new Set((router.query["Categories"] === "") ? [] : ([router.query["Categories"] || allCategories]).flat()); // can be list or string, so flatten for consistent type
 		setFilters([
 			new CheckboxFilter("Categories", projects, checkboxes, selectedCategories),
 		]);
