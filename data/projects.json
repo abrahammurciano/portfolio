@@ -2,7 +2,9 @@
 	{
 		"id": "namiscakes",
 		"title": "Nami's Cakes Website",
-		"description": "A website I made for a small business which baked beautiful and delicious custom cakes with astonishing decorations. I created the website from scratch using plain HTML, CSS, and JavaScript for the front end, and PHP with SQL for the back end. This was the first full stack website I made.",
+		"description": [
+			"A website I made for a small business which baked beautiful and delicious custom cakes with astonishing decorations. I created the website from scratch using plain HTML, CSS, and JavaScript for the front end, and PHP with SQL for the back end. This was the first full stack website I made."
+		],
 		"thumbnail": "/images/portfolio/namiscakes-thumb.jpg",
 		"images": ["/images/portfolio/namiscakes.jpg"],
 		"categories": [
@@ -18,12 +20,27 @@
 	{
 		"id": "gbss-hagaddah",
 		"title": "GBSS Hagaddah Cover",
-		"description": "Every year before Pesach, my high school would make a Haggadah in which each student would collaborate with a different Devar Torah. One year, I was tasked with designing the front cover for this school project. The front cover I designed uses a dark red primary colour to represent the four iconic cups of wine which make up an important part of the Pesach Seder. The rest of the cover is all a light silvery white which alludes to the silver which is traditionally used for the goblets holding the aforementioned four cups, as well as the white tablecloth often used for the Seder table.\n\nOverall, the simplicity of the design gives it a certain elegance which makes the hagaddah look perfectly harmonious on the Seder table.",
+		"description": [
+			"Every year before Pesach, my high school would make a Haggadah in which each student would collaborate with a different Devar Torah. One year, I was tasked with designing the front cover for this school project. The front cover I designed uses a dark red primary colour to represent the four iconic cups of wine which make up an important part of the Pesach Seder. The rest of the cover is all a light silvery white which alludes to the silver which is traditionally used for the goblets holding the aforementioned four cups, as well as the white tablecloth often used for the Seder table.",
+			"Overall, the simplicity of the design gives it a certain elegance which makes the hagaddah look perfectly harmonious on the Seder table."
+		],
 		"thumbnail": "/images/portfolio/haggada-thumb.jpg",
 		"images": [
 			"/images/portfolio/haggada-photo.jpg",
 			"/images/portfolio/haggada-cover.jpg"
 		],
 		"categories": ["Graphic Design", "Book Cover"]
+	},
+	{
+		"id": "mami-shula",
+		"title": "Mami Shula Nail Salon Business Cards",
+		"description": [
+			"When a family friend wanted to start her own business, she approached me and asked me if I would like to design her business cards. Having never done any business cards before, and not knowing much about the manicure industry, I nevertheless took on the challenge.",
+			"After considering several options, I settled upon a simple vector pattern using nail polish related items overlaying the solid purple background. Over this background, I placed a solid coloured ribbon upon which I could put the datails necessary for the business card.",
+			"For the main font, I chose something stylish with a hint of funky to write the name of the business with."
+		],
+		"thumbnail": "/images/portfolio/placeholder-thumbnail.png",
+		"images": [],
+		"categories": ["Graphic Design", "Business Card"]
 	}
 ]

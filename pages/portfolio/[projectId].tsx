@@ -26,17 +26,17 @@ export default function ProjectPage() {
 	} : {}
 
 	return (
-		<>
-			<Section>
-				<h1>{project.title}</h1>
-				<div className={css.TagsWrapper}>
-					<Tags labels={project.categories} getLink={label => `/portfolio?Categories=${encodeURIComponent(label)}`} />
-				</div>
-				<div className={css.GalleryWrapper}>
-					<ImageGallery items={project.images.map(image => ({ original: image, thumbnail: image }))} showThumbnails={false} {...singleImageProps} />
-				</div>
-				<p>{project.description}</p>
-			</Section>
-		</>
+		<Section>
+			<h1>{project.title}</h1>
+			<div className={css.TagsWrapper}>
+				<Tags labels={project.categories} getLink={label => `/portfolio?Categories=${encodeURIComponent(label)}`} />
+			</div>
+			<div className={css.GalleryWrapper}>
+				<ImageGallery items={project.images.map(image => ({ original: image, thumbnail: image }))} showThumbnails={false} {...singleImageProps} />
+			</div>
+			{project.description.map((paragraph, index) => (
+				<p key={index}>{paragraph}</p>
+			))}
+		</Section>
 	);
 }
