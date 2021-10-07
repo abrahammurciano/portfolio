@@ -42,5 +42,29 @@
 		"thumbnail": "/images/portfolio/placeholder-thumbnail.png",
 		"images": [],
 		"categories": ["Graphic Design", "Business Card"]
+	},
+	{
+		"id": "returning-stronger",
+		"title": "Returning Stronger: A Gibralter Kollel Project",
+		"description": [
+			"In the year 2020, unfortunately many communities worldwide found themselves unable to keep their synagogues open through the pandemic. In Gibraltar, there was a period of six weeks when all synagogues remained closed, and everyone found themselves unable to pray in a minyan.",
+			"When this period of time came to an end, the Gibraltar Kollel started a program where people could sign up and commit to maintaining silence and respect within the synagogues during times of prayer for a month. When people signed up, they would be able to see the names of all the other people who commited.",
+			"I was asked to create the website where people would be able to commit to this wonderful initiative, as well as a poster which could be hung up in the synagogue bulletin boards encouraging people to join the program.",
+			"The website needed to be completed in short notice, so I made it a single page with a single input for people to submit their names on the top, followed by the list of names of those who were participating so far.",
+			"A design concept which came to me early on in the planning of the website was to have an animation where the names would grow as they approaced the middle of the page then shrink again as they left the screen. In order to implement this, I used plain old JavaScript and CSS.",
+			"The backend of the website was implement in some very rushed PHP. To save time, and knowing that there weren't going to be absurd amounts of participants, I skipped on storing names in a database and kept everything in a plain text file.",
+			"The poster I designed for this project was very similar in style to the website. I used a dark and faded background image which was a combination of photographs from all four of Gibraltar's synagogues."
+		],
+		"thumbnail": "/images/portfolio/placeholder-thumbnail.png",
+		"images": [],
+		"categories": [
+			"Graphic Design",
+			"Website",
+			"Poster",
+			"PHP",
+			"HTML",
+			"JavaScript",
+			"CSS"
+		]
 	}
 ]
