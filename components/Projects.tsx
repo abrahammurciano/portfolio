@@ -14,8 +14,8 @@ export default function Projects(props: ProjectsProps) {
 			{props.projects.map((project, index) => (
 				<ProjectTile key={index} project={project} />
 			))}
-			{range(3).map(() => (
-				<div className={tileCss.ProjectTile} />
+			{range(3).map((i) => (
+				<div className={tileCss.ProjectTile} key={i} />
 			))}
 		</div>
 	);

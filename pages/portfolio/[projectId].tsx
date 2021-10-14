@@ -27,7 +27,7 @@ export default function ProjectPage() {
 
 	return (
 		<Section>
-			<h1>{project.title}</h1>
+			<h1 className={css.Title}>{project.title}</h1>
 			<div className={css.TagsWrapper}>
 				<Tags labels={project.categories} getLink={label => `/portfolio?Categories=${encodeURIComponent(label)}`} />
 			</div>

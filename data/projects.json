@@ -18,6 +18,36 @@
 		]
 	},
 	{
+		"id": "denial",
+		"title": "Denial Movie Showing Poster",
+		"description": [
+			"One year on Tisha Be-av the Youth Club in Gibraltar organized a showing of the movie Denial for the youth. Being a movie about the holocaust, I found it fitting to use a grayscale palette for the poster. Along this same theme you'll notice if you look closely, that the graphic used to divide one section of text from another is in fact some barbed wire.",
+			"Additionally, you might notice that the title design has several elements giving it the style of a movie's opening sequence."
+		],
+		"thumbnail": "/images/portfolio/denial-thumb.jpg",
+		"images": [
+			"/images/portfolio/denial-mockup.jpg",
+			"/images/portfolio/denial.jpg"
+		],
+		"categories": ["Graphic Design", "Poster"]
+	},
+	{
+		"id": "mami-shula",
+		"title": "Mami Shula Nail Salon Business Cards",
+		"description": [
+			"When a family friend wanted to start her own business, she approached me and asked me if I would like to design her business cards. Having never done any business cards before, and not knowing much about the manicure industry, I nevertheless took on the challenge.",
+			"After considering several options, I settled upon a simple vector pattern using nail polish related items overlaying the solid purple background. Over this background, I placed a solid coloured ribbon upon which I could put the details necessary for the business card.",
+			"For the main font, I chose something stylish with a hint of funky to write the name of the business with."
+		],
+		"thumbnail": "/images/portfolio/mami-shula-nails-thumb.jpg",
+		"images": [
+			"/images/portfolio/mami-shula-nails.jpg",
+			"/images/portfolio/mami-shula-nails-en.png",
+			"/images/portfolio/mami-shula-nails-he.png"
+		],
+		"categories": ["Graphic Design", "Business Card"]
+	},
+	{
 		"id": "gbss-hagaddah",
 		"title": "GBSS Hagaddah Cover",
 		"description": [
@@ -32,31 +62,15 @@
 		"categories": ["Graphic Design", "Book Cover"]
 	},
 	{
-		"id": "mami-shula",
-		"title": "Mami Shula Nail Salon Business Cards",
-		"description": [
-			"When a family friend wanted to start her own business, she approached me and asked me if I would like to design her business cards. Having never done any business cards before, and not knowing much about the manicure industry, I nevertheless took on the challenge.",
-			"After considering several options, I settled upon a simple vector pattern using nail polish related items overlaying the solid purple background. Over this background, I placed a solid coloured ribbon upon which I could put the datails necessary for the business card.",
-			"For the main font, I chose something stylish with a hint of funky to write the name of the business with."
-		],
-		"thumbnail": "/images/portfolio/mami-shula-nails-thumb.jpg",
-		"images": [
-			"/images/portfolio/mami-shula-nails.jpg",
-			"/images/portfolio/mami-shula-nails-en.png",
-			"/images/portfolio/mami-shula-nails-he.png"
-		],
-		"categories": ["Graphic Design", "Business Card"]
-	},
-	{
 		"id": "returning-stronger",
-		"title": "Returning Stronger: A Gibralter Kollel Project",
+		"title": "Returning Stronger: A Gibraltar Kollel Project",
 		"description": [
 			"In the year 2020, unfortunately many communities worldwide found themselves unable to keep their synagogues open through the pandemic. In Gibraltar, there was a period of six weeks when all synagogues remained closed, and everyone found themselves unable to pray in a minyan.",
-			"When this period of time came to an end, the Gibraltar Kollel started a program where people could sign up and commit to maintaining silence and respect within the synagogues during times of prayer for a month. When people signed up, they would be able to see the names of all the other people who commited.",
+			"When this period of time came to an end, the Gibraltar Kollel started a program where people could sign up and commit to maintaining silence and respect within the synagogues during times of prayer for a month. When people signed up, they would be able to see the names of all the other people who committed.",
 			"I was asked to create the website where people would be able to commit to this wonderful initiative, as well as a poster which could be hung up in the synagogue bulletin boards encouraging people to join the program.",
 			"The website needed to be completed in short notice, so I made it a single page with a single input for people to submit their names on the top, followed by the list of names of those who were participating so far.",
-			"A design concept which came to me early on in the planning of the website was to have an animation where the names would grow as they approaced the middle of the page then shrink again as they left the screen. In order to implement this, I used plain old JavaScript and CSS.",
-			"The backend of the website was implement in some very rushed PHP. To save time, and knowing that there weren't going to be absurd amounts of participants, I skipped on storing names in a database and kept everything in a plain text file.",
+			"A design concept which came to me early on in the planning of the website was to have an animation where the names would grow as they approached the middle of the page then shrink again as they left the screen. In order to implement this, I used plain old JavaScript and CSS.",
+			"The back-end of the website was implement in some very rushed PHP. To save time, and knowing that there weren't going to be absurd amounts of participants, I skipped on storing names in a database and kept everything in a plain text file.",
 			"The poster I designed for this project was very similar in style to the website. I used a dark and faded background image which was a combination of photographs from all four of Gibraltar's synagogues."
 		],
 		"thumbnail": "/images/portfolio/returning-stronger-thumb.png",
@@ -78,9 +92,9 @@
 		"id": "atid-logo",
 		"title": "Atid Youth Organization Logo",
 		"description": [
-			"In my late highschool years, a youth organization was founded in Gibraltar which all my friends and I took part in. I volunteered to create their logo. The youth organization was called 'Atid', which means future in Hebrew. They wanted the logo to incorporate this word both in Hebrew, as well as transliterated to English.",
-			"For the centerpiece of the logo, I managed (after messing around with fonts and vectors for a while) to craft a sideways 'A' which was also an upright 'Ayin' — the first Hebrew letter of the word Atid.",
-			"This centerpiece eventually also became the 'A' in the English side of the logo, which inherited the gap through all the letters from the 'A'.",
+			"In my late high school years, a youth organization was founded in Gibraltar which all my friends and I took part in. I volunteered to create their logo. The youth organization was called 'Atid', which means future in Hebrew. They wanted the logo to incorporate this word both in Hebrew, as well as transliterated to English.",
+			"For the centrepiece of the logo, I managed (after messing around with fonts and vectors for a while) to craft a sideways 'A' which was also an upright 'Ayin' — the first Hebrew letter of the word Atid.",
+			"This centrepiece eventually also became the 'A' in the English side of the logo, which inherited the gap through all the letters from the 'A'.",
 			"Although it is one of my first logo designs, it remains one of my proudest."
 		],
 		"categories": ["Graphic Design", "Logo"],
@@ -89,5 +103,31 @@
 			"/images/portfolio/atid-logo-long.png",
 			"/images/portfolio/atid-logo-round.png"
 		]
+	},
+	{
+		"id": "zmanim-app-logo",
+		"title": "Zmanim App Logo",
+		"description": [
+			"When it comes to my electronic devices, I would consider myself to be a little bit OCD about their appearance. One day, I installed an icon pack on my phone which made all my apps look round and follow material design principles.",
+			"However I could not find a good zmanim app with a decent logo which wouldn't look like a complete eyesore on my home screen. That's when I decided I would make my own logo to replace the ugly existing one.",
+			"I ended up designing a round clock face design which had a sun rising over the hills in the background. On the mountains I put the word 'Zmanim' in Hebrew.",
+			"When I finished my design, rather than simply using it for myself, I reached out to the developer of the app I was using, offering to contribute my improved logo design to his open source app. He gladly agreed and after some small tweaks, as well as creating a matching play store picture, his app came out with an update which included my logo design."
+		],
+		"thumbnail": "/images/portfolio/zmanim-banner.svg",
+		"images": [
+			"/images/portfolio/zmanim-banner.svg",
+			"/images/portfolio/zmanim-logo.svg"
+		],
+		"categories": ["Graphic Design", "Logo", "App Icon", "Material Design"]
+	},
+	{
+		"id": "bat-mitzvah",
+		"title": "Bat Mitzvah Invitation",
+		"description": [
+			"This invitation features a healthy balance between fancy-elegant and smart-elegant, which is perfect for a Bat Mitzvah Invitation. The polka-dot pattern on the side, along with the ribbon illusion which borders it, really make this invitation stand out and give it the look of a proper invitation."
+		],
+		"thumbnail": "/images/portfolio/bat-mitzvah-thumb.jpg",
+		"images": ["/images/portfolio/bat-mitzvah.jpg"],
+		"categories": ["Graphic Design", "Invitation"]
 	}
 ]
