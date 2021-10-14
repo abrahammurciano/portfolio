@@ -3,8 +3,5 @@
 }
 
 .GalleryWrapper {
-	min-height: 200px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	background-color: var(--dark-1);
 }

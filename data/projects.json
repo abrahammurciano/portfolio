@@ -39,8 +39,12 @@
 			"After considering several options, I settled upon a simple vector pattern using nail polish related items overlaying the solid purple background. Over this background, I placed a solid coloured ribbon upon which I could put the datails necessary for the business card.",
 			"For the main font, I chose something stylish with a hint of funky to write the name of the business with."
 		],
-		"thumbnail": "/images/portfolio/placeholder-thumbnail.png",
-		"images": [],
+		"thumbnail": "/images/portfolio/mami-shula-nails-thumb.jpg",
+		"images": [
+			"/images/portfolio/mami-shula-nails.jpg",
+			"/images/portfolio/mami-shula-nails-en.png",
+			"/images/portfolio/mami-shula-nails-he.png"
+		],
 		"categories": ["Graphic Design", "Business Card"]
 	},
 	{
@@ -55,8 +59,11 @@
 			"The backend of the website was implement in some very rushed PHP. To save time, and knowing that there weren't going to be absurd amounts of participants, I skipped on storing names in a database and kept everything in a plain text file.",
 			"The poster I designed for this project was very similar in style to the website. I used a dark and faded background image which was a combination of photographs from all four of Gibraltar's synagogues."
 		],
-		"thumbnail": "/images/portfolio/placeholder-thumbnail.png",
-		"images": [],
+		"thumbnail": "/images/portfolio/returning-stronger-thumb.png",
+		"images": [
+			"/images/portfolio/returning-stronger-poster.png",
+			"/images/portfolio/returning-stronger-reminder.png"
+		],
 		"categories": [
 			"Graphic Design",
 			"Website",
@@ -65,6 +72,22 @@
 			"HTML",
 			"JavaScript",
 			"CSS"
+		]
+	},
+	{
+		"id": "atid-logo",
+		"title": "Atid Youth Organization Logo",
+		"description": [
+			"In my late highschool years, a youth organization was founded in Gibraltar which all my friends and I took part in. I volunteered to create their logo. The youth organization was called 'Atid', which means future in Hebrew. They wanted the logo to incorporate this word both in Hebrew, as well as transliterated to English.",
+			"For the centerpiece of the logo, I managed (after messing around with fonts and vectors for a while) to craft a sideways 'A' which was also an upright 'Ayin' — the first Hebrew letter of the word Atid.",
+			"This centerpiece eventually also became the 'A' in the English side of the logo, which inherited the gap through all the letters from the 'A'.",
+			"Although it is one of my first logo designs, it remains one of my proudest."
+		],
+		"categories": ["Graphic Design", "Logo"],
+		"thumbnail": "/images/portfolio/atid-logo-thumb.png",
+		"images": [
+			"/images/portfolio/atid-logo-long.png",
+			"/images/portfolio/atid-logo-round.png"
 		]
 	}
 ]
