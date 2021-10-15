@@ -1,0 +1,10 @@
+.CardGrid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--gap);
+}
+
+.CardGridCell {
+	flex-grow: 1;
+	width: var(--card-min-width);
+}

@@ -12,7 +12,7 @@ export interface ProjectTileProps {
 export default function ProjectTile({ project }: ProjectTileProps) {
 	const router = useRouter();
 	return (
-		<Card className={css.ProjectTile} onClick={() => router.push(`/portfolio/${project.id}`)} borderRadius="10px">
+		<div className={css.ProjectTile} onClick={() => router.push(`/portfolio/${project.id}`)}>
 			<div className={css.Thumbnail}>
 				<Image src={project.thumbnail} layout="fill" objectFit="cover" alt="" />
 			</div>
@@ -20,6 +20,6 @@ export default function ProjectTile({ project }: ProjectTileProps) {
 				<div className={css.Title}>{project.title}</div>
 				<div className={css.Description}>{project.description}</div>
 			</div>
-		</Card>
+		</div>
 	);
 }

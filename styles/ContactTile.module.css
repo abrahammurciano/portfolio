@@ -1,0 +1,29 @@
+.ContactTile {
+	--size: 80px;
+	display: flex;
+	height: var(--size);
+	align-items: center;
+	cursor: pointer;
+}
+
+.ContactIcon {
+	width: var(--size);
+	height: var(--size);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 64px;
+}
+
+.ContactLabel {
+	flex-grow: 1;
+	font-weight: 600;
+	font-size: x-large;
+}
+
+.RightIcon {
+	background-color: var(--dark-2);
+	mask-image: url(/images/next.svg);
+	mask-position: center;
+	mask-repeat: no-repeat;
+	mask-size: 32px;
+}

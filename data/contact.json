@@ -1,0 +1,17 @@
+[
+	{
+		"label": "WhatsApp",
+		"url": "https://wa.me/447397842936",
+		"icon": "/images/whatsapp.png"
+	},
+	{
+		"label": "Discord",
+		"url": "https://discord.gg/mzhSRnnY78",
+		"icon": "/images/discord.png"
+	},
+	{
+		"label": "E-Mail",
+		"url": "mailto:abrahammurciano@gmail.com",
+		"icon": "/images/email.png"
+	}
+]
